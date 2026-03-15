@@ -1,0 +1,27 @@
+# Secrets — NEVER commit
+.streamlit/secrets.toml
+
+# Database — too large
+data/amazon_india.db
+data/*.db
+data/*.db-shm
+data/*.db-wal
+
+# Raw data — too large  
+data/raw/
+data/cleaned/*.csv
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.env
+venv/
+env/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/

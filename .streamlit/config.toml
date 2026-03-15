@@ -1,0 +1,35 @@
+[theme]
+base = "dark"
+primaryColor = "#FF9900"
+backgroundColor = "#0E1117"
+secondaryBackgroundColor = "#161B22"
+textColor = "#C9D1D9"
+font = "sans serif"
+
+[server]
+headless = true
+runOnSave = true
+
+[browser]
+gatherUsageStats = false
+```
+
+**Why this matters:**
+- Without this, Streamlit might load in light mode on some machines — breaking your entire dark theme CSS
+- `primaryColor = "#FF9900"` makes all buttons, sliders, and widgets match Amazon orange automatically
+- `runOnSave = true` is a dev convenience
+- `gatherUsageStats = false` is clean/professional practice
+
+**Your folder structure should now look like:**
+```
+amazon_india_analytics/
+├── .streamlit/
+│   └── config.toml        ← new
+├── app.py
+├── requirements.txt       ← from last step
+├── assets/
+├── pages/
+├── utils/
+├── notebook/
+├── data/
+└── outputs/
